@@ -15,6 +15,7 @@ public class InteractObject : MonoBehaviour
     {
         if (objectType == ObjectType.Tree)
         {
-            Debug.Log("This is a tree"); }
+            Debug.Log("This is a tree");
+        }
     }
 }
