@@ -11,7 +11,10 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
     private Transform planet;
     private bool isMooving;
 
-    private Vector3 targetPoint;
+    private float distanceC;
+    private float distanceA;
+    private float distanceB;
+    private float angleA;
 
     private Quaternion targetRotation;
     // Start is called before the first frame update
@@ -25,9 +28,10 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
     {
         if (isMooving)
         {
-            
+            spaceship.rotation = Quaternion.Slerp(spaceship.rotation, targetRotation, Time.deltaTime * 5f);
             float step =  speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, planet.position, step);
+            
 
             // Check if the position of the cube and sphere are approximately equal.
             if (Vector3.Distance(transform.position, planet.position) < 18f)
@@ -42,5 +46,9 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
     {
         this.planet = planet;
         isMooving = true;
+        distanceA = planet.position.y - spaceship.position.y;
+        distanceB = planet.position.z - spaceship.position.z;
+        angleA = Mathf.Atan2(distanceA, distanceB) * Mathf.Rad2Deg;
+        targetRotation = Quaternion.Euler(-angleA, 0, 0);
     }
 }
