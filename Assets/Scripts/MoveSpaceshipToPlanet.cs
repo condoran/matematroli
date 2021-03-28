@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveSpaceshipToPlanet : MonoBehaviour
 {
     public Transform spaceship;
+    public GameObject[] particleSystems;
     
     [SerializeField] private float speed;
 
@@ -38,6 +39,10 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
             {
                 isMooving = false;
                 Debug.Log(Vector3.Distance(transform.position, planet.position));
+                foreach (GameObject system in particleSystems)
+                {
+                    system.GetComponent<ParticleSystem>().Stop();
+                }
             }
         }
     }
@@ -50,5 +55,9 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
         distanceB = planet.position.z - spaceship.position.z;
         angleA = Mathf.Atan2(distanceA, distanceB) * Mathf.Rad2Deg;
         targetRotation = Quaternion.Euler(-angleA, 0, 0);
+        foreach (GameObject system in particleSystems)
+        {
+            system.GetComponent<ParticleSystem>().Play();
+        }
     }
 }
