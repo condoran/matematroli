@@ -6,6 +6,7 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
 {
     public Transform spaceship;
     public GameObject[] particleSystems;
+    public GameObject button;
     
     [SerializeField] private float speed;
 
@@ -43,6 +44,11 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
                 {
                     system.GetComponent<ParticleSystem>().Stop();
                 }
+                button.SetActive(true);
+            }
+            else
+            {
+                button.SetActive(false);
             }
         }
     }
