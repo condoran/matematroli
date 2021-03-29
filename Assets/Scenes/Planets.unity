@@ -5515,6 +5515,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 23350840279873830, guid: 397e4c5b32e3a41a2a4237483eb11f74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 816a1e9d58d34d34b85cfabc577a2fa4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397e4c5b32e3a41a2a4237483eb11f74, type: 3}
 --- !u!1 &1462255181 stripped
@@ -5537,6 +5542,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dc9dba0098fee42dcb0d8bd091b7be5a, type: 3}
+--- !u!114 &1462255183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462255181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 299a993d98ad2b840b27c548490bd1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueCol: 96
+  redCol: 66
+  greenCol: 227
 --- !u!1 &1707746686
 GameObject:
   m_ObjectHideFlags: 0
