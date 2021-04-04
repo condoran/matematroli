@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657922, g: 0.49641538, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5451,9 +5451,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1707746692}
-        m_MethodName: ChangeSceneWithNr
-        m_Mode: 3
+      - m_Target: {fileID: 1707746693}
+        m_MethodName: Excercise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5602,6 +5602,7 @@ GameObject:
   - component: {fileID: 1707746690}
   - component: {fileID: 1707746691}
   - component: {fileID: 1707746692}
+  - component: {fileID: 1707746693}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Tree
@@ -5709,6 +5710,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4fadc64389af7c44a470acbcedf96e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1707746693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707746686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a945b111b95ce3044b2042cd755e6a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1954368706

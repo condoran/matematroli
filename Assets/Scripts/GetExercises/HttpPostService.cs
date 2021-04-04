@@ -60,7 +60,7 @@ namespace MatematroliiCreateConfig.Service
         //     }
         // }
 
-        public async Task UpdateExercise()
+        public async Task<List<ExerciseViewRasponse>> GetExercise()
         {
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNDFkNmJjZmE5N2RmMDAxNTEyYTBlNiIsImlhdCI6MTYxNjI0MTAzMCwiZXhwIjoxNjE4ODMzMDMwfQ.LjpIjOqMCgGXVD_jILexxcQO-YBKtfuZwB-PM9-XvNY");
 
@@ -75,8 +75,7 @@ namespace MatematroliiCreateConfig.Service
 
             //exercise_id = "605906246a5ac80015c1e09e";
 
-            // return configurationResponse;
-
+            return configurationResponse;
         }
     }
 }

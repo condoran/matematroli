@@ -39,7 +39,7 @@ public class MoveSpaceshipToPlanet : MonoBehaviour
             if (Vector3.Distance(transform.position, planet.position) < 18f)
             {
                 isMooving = false;
-                Debug.Log(Vector3.Distance(transform.position, planet.position));
+                // Debug.Log(Vector3.Distance(transform.position, planet.position));
                 foreach (GameObject system in particleSystems)
                 {
                     system.GetComponent<ParticleSystem>().Stop();
