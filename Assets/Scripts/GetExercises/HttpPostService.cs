@@ -62,7 +62,7 @@ namespace MatematroliiCreateConfig.Service
 
         public async Task<List<ExerciseViewRasponse>> GetExercise()
         {
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNDFkNmJjZmE5N2RmMDAxNTEyYTBlNiIsImlhdCI6MTYxNjI0MTAzMCwiZXhwIjoxNjE4ODMzMDMwfQ.LjpIjOqMCgGXVD_jILexxcQO-YBKtfuZwB-PM9-XvNY");
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTc5OGI4NzkzZWNjMDAxNTI0M2VlMCIsImlhdCI6MTYxODg0MTY4NiwiZXhwIjoxNjIxNDMzNjg2fQ.2GZBhpQpkhbwKP5J-xuPVemLsEWuuAKGZVzIn01PTmo");
 
             //var content = new StringContent(JsonConvert.SerializeObject(exercise, Formatting.None, serializerSettings), Encoding.UTF8, "application/json");
             var response = await client.GetAsync($"https://admin.matematrolii.com/exercises?name=exercise1_pack1_zone1_adendus_conf-1");

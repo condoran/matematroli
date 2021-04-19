@@ -7,7 +7,9 @@ using UnityEngine;
 public class StartExcercises : MonoBehaviour
 {
     private HttpPostService service;
-    
+    public AudioSource audio;
+    private AudioClip lamusic;
+    private WWW sound;
     
     void Start()
     {
@@ -17,6 +19,9 @@ public class StartExcercises : MonoBehaviour
     public void Excercise()
     {
         var result = Task.Run(() => service.GetExercise()).Result;
-        Debug.Log(result[0].Name);
+        sound = new WWW(result[0].Properties.HelperOne.Audio);
+        lamusic = sound.GetAudioClip(true, true, AudioType.MPEG);
+        //audio.clip = lamusic;
+        audio.PlayOneShot(lamusic);
     }
 }
