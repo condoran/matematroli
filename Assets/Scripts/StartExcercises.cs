@@ -17,6 +17,6 @@ public class StartExcercises : MonoBehaviour
     public void Excercise()
     {
         var result = Task.Run(() => service.GetExercise()).Result;
-        Debug.Log(result[0].Name + ", " + result[0].Title + ", " + result[0].Type + ", " + result[0].Description);
+        Debug.Log(result[0].Name);
     }
 }
